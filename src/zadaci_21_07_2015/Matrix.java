@@ -15,11 +15,13 @@ public class Matrix {
 	 * @param n the size of the matrix is n*n
 	 */
 	public static void printMatrix(int n){
-		for(int i=0;i<n;i++){
-			for(int j=0;j<n;j++){
-				System.out.print((int)(Math.random()*2)+"  ");
+		for(int i=0;i<n;i++){ //i is the row number - from 0 to n
+			for(int j=0;j<n;j++){ //j is the column number - from 0 to n
+				
+				System.out.print((int)(Math.random()*2)+"  "); //print the ij element of the matrix
+				//(int)(Math.random()*2) random generates 0 or 1
 			}
-			System.out.println();
+			System.out.println(); //we are at the n-th column, so: new line
 		}
 	}
 	
