@@ -3,6 +3,10 @@ package zadaci_21_07_2015;
 // These program prints out all the leap years from 101 to 2100, ten per line
 // and the total number of leap years in that time period
 
+/**
+ * @author Marina Sljivic
+ * 
+ */
 public class LeapYear {
 
 	public static void main(String[] args) {
