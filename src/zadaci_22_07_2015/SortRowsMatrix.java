@@ -19,10 +19,10 @@ public class SortRowsMatrix {
 	 * @return the array with sorted rows only
 	 */
 	public static double[][] sortRows(double[][] array){
-		for(int i=0;i<array.length;i++){
-			Arrays.sort(array[i]);
+		for(int i=0;i<array.length;i++){ //i is he index of every subarray(row)
+			Arrays.sort(array[i]);//sort the i row
 		}
-		return array;
+		return array;//return the sorted array
 	}
 	
 	public static void main(String[] args) {
