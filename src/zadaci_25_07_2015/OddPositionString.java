@@ -37,7 +37,7 @@ public class OddPositionString {
 		System.out.println("Enter a sentence: ");
 		String sentence = scan.nextLine(); //take the user's inputed string
 		System.out.println("In odd position: "+oddChars(sentence)); //print the entered string's characters at odd position
-
+		scan.close();
 	}
 
 }
