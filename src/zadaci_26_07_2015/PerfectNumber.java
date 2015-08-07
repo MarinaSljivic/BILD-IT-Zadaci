@@ -40,8 +40,8 @@ public class PerfectNumber {
 
 		//we are going to check all the numbers from 0(0:0 its not defined so its from 1) to 10000
 		for (int i=1; i<=10000; i++) {
-			if(isPerfectNumber(i)){
-				System.out.println(i);
+			if(isPerfectNumber(i)){ //if number i is perfect
+				System.out.println(i); //print it
 			}
 		}
 	}
