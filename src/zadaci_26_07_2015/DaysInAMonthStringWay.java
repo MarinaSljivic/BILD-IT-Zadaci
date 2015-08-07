@@ -18,16 +18,19 @@ public class DaysInAMonthStringWay {
 	 * @return integer that represents the number of the given month 
 	 */
 	public static int whatMonth(String month){
+		//this integer represents the number of a month from 1-12 if month is a valid month
+		//else it remains 0
 		int numberOfMonth = 0;
 		
+		//the months in this array are in order from index 0 to 11
 		String[] monthsArray = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
 		
 		for(int i=0;i<monthsArray.length;i++){//for every month in the array
-			if(monthsArray[i].equals(month)){
-				numberOfMonth=i+1;
+			if(monthsArray[i].equals(month)){ //if the month equals to one of the months in the monthsArray
+				numberOfMonth=i+1; //then the number of the month is the the index i+1 (+1 because the index starts from 0)
 			}
 		}
-		return numberOfMonth;
+		return numberOfMonth; //return the number of the month
 	}
 	public static void main(String[] args) {
 		Scanner scan=new Scanner(System.in);
