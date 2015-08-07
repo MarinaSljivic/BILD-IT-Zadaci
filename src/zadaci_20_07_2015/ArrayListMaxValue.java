@@ -10,7 +10,7 @@ import java.util.Collections;
 public class ArrayListMaxValue {
 
 	/**
-	 * These method takes as parameter an ArrayList of Integers and returns the
+	 * This method takes as parameter an ArrayList of Integers and returns the
 	 * max value in the list if the list isn't empty or null, otherwise it
 	 * returns null
 	 * 

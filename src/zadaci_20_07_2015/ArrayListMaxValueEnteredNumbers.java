@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ArrayListMaxValueEnteredNumbers {
 	
 	/**
-	 * These method takes the users inputs and add them to an arrayList,
+	 * This method takes the users inputs and adds them to an arrayList,
 	 * if the users input is 0 it stops
 	 * 
 	 * @return an ArrayList of Integers
@@ -26,9 +26,10 @@ public class ArrayListMaxValueEnteredNumbers {
 			
 			do { //do all these:
 				try {
-					System.out.print("Enter a number: ");
 					input = scan.nextInt(); //if this passed without exceptions, errors
-					list.add(input); //add the number to the list
+					if(input!=0){//and the input is not 0
+						list.add(input); //add the number to the list
+					}
 					continueInput = false; //then we dont need to continue input (it is false),
 											//the right number has been entered
 				} catch (InputMismatchException ex) {
@@ -44,6 +45,7 @@ public class ArrayListMaxValueEnteredNumbers {
 	}
 	
 	public static void main(String[] args) {
+		System.out.println("Enter some integers one per line (press 0 to stop): ");
 		ArrayList<Integer> listInt=inputListOfIntegers();
 		
 		int maxNumber = ArrayListMaxValue.max(listInt); //we are using the metod from ArrayListMaxValue class
