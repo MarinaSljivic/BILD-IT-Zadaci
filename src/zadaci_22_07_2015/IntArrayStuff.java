@@ -44,7 +44,9 @@ public class IntArrayStuff {
 				try {
 					System.out.println("Enter a number: ");
 					input = scan.nextInt(); //try to take the user's input
-					list.add(input);//add the user's input in the list
+					if(input!=0){
+						list.add(input);//add the user's input in the list
+					}
 					//if this passed without exceptions, errors
 					continueInput = false; //then we dont need to continue input (it is false),
 											//the right number has been entered

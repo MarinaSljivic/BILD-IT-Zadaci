@@ -119,6 +119,34 @@ public class Numbers {
 		} while (continueInput);//while the number isnt entered correctly(continueInput is true)
 		return number;
 	}
+	
+	/**
+	 * This method tries to take a POSITIVE long INCLUDED 0 from the user and handles the exceptions if the input
+	 * is not a positive long.
+	 * 
+	 * @return a positive long that the user inputs
+	 */
+	public static long inputPositiveLongZeroIncluded(){
+		Scanner scan = new Scanner(System.in);
+		long number=0; //set an initial value for the number
+		boolean continueInput = true;//these means that we need to continue to take users inputs
+		
+		do { //do all these:
+			try {
+				number = scan.nextLong();//try to take the long from user's input
+				//if this passed without exceptions, errors
+				if(number<0){ //if the number is lower than 0, throw a new Exception
+					throw new InputMismatchException();
+				}
+				continueInput = false; //then we dont need to continue input (it is false),
+										//the right number has been entered
+			} catch (InputMismatchException ex) {
+				System.out.println("Try again. (Incorrect input: a positive long is required)");
+				scan.nextLine(); // discard the current input, pass to the nextLine
+			}
+		} while (continueInput);//while the number isnt entered correctly(continueInput is true)
+		return number;
+	}
 
 	/**
 	 * This method tries to take a POSITIVE integer INCLUDED 0 from the user and handles the exceptions if the input
@@ -135,7 +163,7 @@ public class Numbers {
 			try {
 				number = scan.nextInt();//try to take the integer from user's input
 				//if this passed without exceptions, errors
-				if(number<0){ //if the number is 0 or lower, throw a new Exception
+				if(number<0){ //if the number is lower than 0, throw a new Exception
 					throw new InputMismatchException();
 				}
 				continueInput = false; //then we dont need to continue input (it is false),
