@@ -59,7 +59,7 @@ public class NumbersStuff {
 					scan.nextLine(); // discard the current input, pass to the nextLine
 				}
 			} while (continueInput);//while the number is not entered correctly(continueInput is true)
-		}while(input!=0 && list.size()<=100);//do while the user's input is not 0
+		}while(input!=0 && list.size()<100);//do while the user's input is not 0
 		
 		return list;
 	}
