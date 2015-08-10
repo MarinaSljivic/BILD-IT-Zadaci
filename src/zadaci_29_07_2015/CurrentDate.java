@@ -30,7 +30,7 @@ public class CurrentDate {
 										+sdf.format(currentDate));//sdf.format(currentDate) applies the format we set in sdf
 	}
 	public static void main(String[] args) {
-		
+		getIt();
 	}
 
 }
