@@ -62,7 +62,31 @@ public class Numbers {
 		} while (continueInput);//while the number isnt entered correctly(continueInput is true)
 		return number;
 	}
-
+	
+	/**
+	 * This method tries to take a short number from the user and handles the exceptions if the input
+	 * is not a short.
+	 * 
+	 * @return a short that the user inputs
+	 */
+	public static short inputShort(){
+		Scanner scan = new Scanner(System.in);
+		short number=0; //set an initial value for the number
+		boolean continueInput = true;//these means that we need to continue to take users inputs
+		
+		do { //do all these:
+			try {
+				number = scan.nextShort();//try to take the integer from user's input
+				//if this passed without exceptions, errors
+				continueInput = false; //then we dont need to continue input (it is false),
+										//the right number has been entered
+			} catch (Exception ex) {
+				System.out.println("Try again. (Incorrect input: a short number is required)");
+				scan.nextLine(); // discard the current input, pass to the nextLine
+			}
+		} while (continueInput);//while the number isnt entered correctly(continueInput is true)
+		return number;
+	}
 	/**
 	 * This method tries to take a POSITIVE double from the user and handles the exceptions if the input
 	 * is not a positive double.
