@@ -53,15 +53,14 @@ public class Double2DArrayStuff {
 	}
 
 	/**
-	 * These method asks the user to input the dimensions for the 2D array,
-	 * and then its elements, double numbers, one number per line, when he wants to stop
-	 *  he has to type 0. Then the method returns the 2D array that contains its inputs.
+	 * This method asks the user to input the dimensions for the 2D array,
+	 * and then its elements, double numbers, one number per line.
+	 * Then the method returns the 2D array that contains its inputs.
 	 * 
 	 * @return a 2Darray that contains user's inputs
 	 */
 	public static double[][] input2DArray(){
 		Scanner scan = new Scanner(System.in);		
-		
 		
 		System.out.println("Enter the dimensions of the 2D array.");
 		int subarrays=0;//set the dimensions to 0
