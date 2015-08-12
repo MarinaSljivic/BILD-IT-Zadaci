@@ -16,14 +16,14 @@ cij is aij + bij.*/
 public class AlgebraAddTwoMatrices {
 	
 	/**
-	 * This method prints the sum of two matrix and the result matrix: a + b = c, row by row
+	 * This method prints the sum of two matrices and the result matrix: a + b = c, row by row
 	 * 
 	 * @param a double[][] matrix
 	 * @param b double[][] matrix
 	 * @param c double[][] matrix
 	 * 
 	 */
-	public static void printMatrix(double[][] a,double[][] b,double[][] c){
+	public static void printMatricesSum(double[][] a,double[][] b,double[][] c){
 		
 		for(int row=0; row<a.length; row++){ //every printed row would have three rows from three matrices
 			
@@ -105,7 +105,7 @@ public class AlgebraAddTwoMatrices {
 			matrixC = addMatrix(matrixA, matrixB);
 			
 			//print the three matrices
-			printMatrix(matrixA, matrixB, matrixC);
+			printMatricesSum(matrixA, matrixB, matrixC);
 		
 		}catch(Exception e){//if the user inputs something that is not a number catch the exception
 			System.out.println("Bad Input. The matrix's elements must be numbers.");
