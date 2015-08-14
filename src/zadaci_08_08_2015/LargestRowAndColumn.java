@@ -77,11 +77,14 @@ public class LargestRowAndColumn {
 		
 		for(int i=1; i< matrix.length; i++){//index i is from 1 because we have set the maxColumn and maxRow to the 0 index
 			//because we generate a square matrix the matrix.length is equal to matrix[0].length, rows=columns
-			if(maxSumColumn<sumColumn(matrix, i)){//if the maxSumColumn is smaller then the sum of the i.th column
+			if(maxSumColumn < sumColumn(matrix, i)){//if the maxSumColumn is smaller then the sum of the i.th column
 				maxColumn = i;//set the index of the maxColumn to i
+				maxSumColumn = sumColumn(matrix, i); //and the maxSumColumn becomes the bigger one
 			}
-			if(maxSumRow<EmployeeWeeklyHours.sumArrayElements(matrix[i])){//same here with the rows
+			if(maxSumRow < EmployeeWeeklyHours.sumArrayElements(matrix[i])){//same here with the rows
 				maxRow = i;
+				maxSumRow = EmployeeWeeklyHours.sumArrayElements(matrix[i]);
+				//and the maxSumRow becomes the bigger one
 			}
 		}
 
