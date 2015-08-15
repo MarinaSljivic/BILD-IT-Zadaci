@@ -40,7 +40,7 @@ identical if their corresponding elements are equal), false if they aren't.
 	/**
 	 * @param rows int
 	 * @param columns int
-	 * @return the inputed matrix int[][]
+	 * @return the inputed matrix int[rows][columns]
 	 */
 	public static int[][] inputMatrix(int rows, int columns){
 		Scanner scan = new Scanner(System.in);
