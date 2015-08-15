@@ -58,10 +58,10 @@ public class RowSorting {
 			//try to take matrix
 			matrix = AlgebraAddTwoMatrices.inputMatrix(3, 3);
 			
-			System.out.println("The sorted by row matrix:");
+			System.out.println("The new row-sorted matrix:");
 			//print the sorted matrix by rows
 			print(sortRows(matrix));
-			print(matrix);
+			
 		}catch(Exception e){//if the user inputs something that is not a number catch the exception
 			System.out.println("Bad Input. The matrix's elements must be numbers.");
 		}
