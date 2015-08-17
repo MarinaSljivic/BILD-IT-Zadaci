@@ -22,21 +22,30 @@ public class GeometryTriangleArea {
 	 * @param points double[][] 3-by-2, points of the triangle
 	 * @return the area of the triangle given its three points, <br>
 	 * 			if the points are on the same line returns 0 <br>
-	 * 			(In some cases, because of the double I think, returns NaN and 0.0<br>
-	 * 			see: 2 2 4.5 4.5 6 6 and 1 1 5 5 7 7)
 	 */
 	public static double getTriangleArea(double[][] points){
-		double[] size = new double[3]; //the triangle's sizes
-		//the first size is sqrt((x1-x2)^2+(y1-y2)^2)
-		size[0] = Math.sqrt(Math.pow(points[0][0]-points[1][0], 2) + Math.pow(points[0][1]-points[1][1], 2));
-		size[1] = Math.sqrt(Math.pow(points[0][0]-points[2][0], 2) + Math.pow(points[0][1]-points[2][1], 2));
-		size[2] = Math.sqrt(Math.pow(points[1][0]-points[2][0], 2) + Math.pow(points[1][1]-points[2][1], 2));
 		
-		//formula for the triangle's area
-		double s = (size[0]+size[1]+size[2])/2;
-		double area = Math.sqrt(s*(s-size[0])*(s-size[1])*(s-size[2]));
+		//the points(a,b), (m,n) and (x,y) are collinear if and only if:
+		//(n-b)(x-m)=(y-n)(m-a)
+		if ((points[1][1]-points[0][1]) * (points[2][0]-points[1][0]) ==
+				(points[2][1]-points[1][1]) * (points[1][0]-points[0][0])){
+			
+			return 0; //return 0 if they are on the same line
 		
-		return area;
+		}else{
+			
+			double[] size = new double[3]; //the triangle's sizes
+			//the first size is sqrt((x1-x2)^2+(y1-y2)^2)
+			size[0] = Math.sqrt(Math.pow(points[0][0]-points[1][0], 2) + Math.pow(points[0][1]-points[1][1], 2));
+			size[1] = Math.sqrt(Math.pow(points[0][0]-points[2][0], 2) + Math.pow(points[0][1]-points[2][1], 2));
+			size[2] = Math.sqrt(Math.pow(points[1][0]-points[2][0], 2) + Math.pow(points[1][1]-points[2][1], 2));
+			
+			//formula for the triangle's area
+			double s = (size[0]+size[1]+size[2])/2.0;
+			double area = Math.sqrt(s*(s-size[0])*(s-size[1])*(s-size[2]));
+			
+			return area;
+		}
 	}
 	public static void main(String[] args) {
 		//tell the user to input the triangle's points
