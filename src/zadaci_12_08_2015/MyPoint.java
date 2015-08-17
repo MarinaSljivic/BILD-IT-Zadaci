@@ -17,7 +17,7 @@ distance between them.*/
  * @author Marina Sljivic
  *
  */
-class MyPoint{
+public class MyPoint{
 	//data field x and y are the coordinates of MyPoint
 	private double x, y;
 	
